@@ -166,6 +166,12 @@ const rest2 = {
 rest1.numGuests ??= 10;
 rest2.numGuests ??= 10;
 
+// rest2.owner = rest2.owner && '<ANONYMOUS>'; //returns anonymous
+// rest1.owner = rest1.owner && '<ANONYMOUS>'; //returns anonymous
+
+rest1.owner &&= '<ANONYMOUS>'; // returns nothing, undefined
+rest2.owner &&= '<ANONYMOUS>'; // returns anonymous, skips the truthy value
+
 console.log(rest1);
 console.log(rest2);
 

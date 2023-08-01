@@ -175,3 +175,20 @@ rest2.owner &&= '<ANONYMOUS>'; // returns anonymous, skips the truthy value
 console.log(rest1);
 console.log(rest2);
 
+const ingredients = {
+  savory: ['cheese', 'salami', 'cucumber', 'soy'],
+  sweet: ['chocolate,', 'sugar,', 'peanut butter,', 'strawberries,']
+};
+
+const sIngredients = ingredients.sweet;
+// console.log(...sIngredients);
+
+const chocolateBallrecipe = [...sIngredients ,'milk,', 'vanilla.'];
+console.log(...chocolateBallrecipe);
+
+const allIngredients = ingredients.savory;
+console.log(allIngredients, ...chocolateBallrecipe);
+
+const [spread1, ,spread2] = ingredients.sweet;
+console.log(spread1, spread2);
+

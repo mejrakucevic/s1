@@ -55,6 +55,18 @@ restaurant.orderDelivery({
   starterIndex: 2,
 });
 
+const menu = [...restaurant.starterMenu, ...restaurant.mainMenu];
+
+for (const item of menu) console.log(item);
+
+for (const item of menu.entries()) {
+  console.log(item);
+} 
+
+
+const fruit = ['apple', 'orange', 'banana']
+for (const fruits of fruit) console.log(fruits);
+
 const {name, openingHours, categories} = restaurant;
 // console.log(name, openingHours, categories);
 

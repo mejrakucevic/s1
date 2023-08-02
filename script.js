@@ -1,7 +1,7 @@
 'use strict';
 
 const weekdays = ['mon', 'tue', 'wed', 'thu', 'fri', 'sat', 'sun'];
-const openingHous = {
+const openingHours = {
   [weekdays[3]]: {
     open: 12,
     close: 22,
@@ -24,7 +24,7 @@ const restaurant = {
   mainMenu: ['Pizza', 'Pasta', 'Risotto'],
 
   // ES6 enhanced object literals
- // openingHours,
+  openingHours,
 
   order(starterIndex, mainIndex) {
     return [this.starterMenu[starterIndex], this.mainMenu[mainIndex]];
@@ -48,159 +48,8 @@ const restaurant = {
   },
 };
 
-restaurant.orderDelivery({
-  time: '22:30',
-  adress: 'Brajdhfjs, 21',
-  mainindex: 2,
-  starterIndex: 2,
-});
 
-const menu = [...restaurant.starterMenu, ...restaurant.mainMenu];
+// console.log (restaurant.openingHours.mon.open); // returns error
 
-for (const item of menu) console.log(item);
-
-for (const item of menu.entries()) {
-  console.log(item);
-} 
-
-
-const fruit = ['apple', 'orange', 'banana']
-for (const fruits of fruit) console.log(fruits);
-
-const {name, openingHours, categories} = restaurant;
-// console.log(name, openingHours, categories);
-
-// default values
-//const {name : restaurantName, openingHours: hours, categories: tags} = restaurant;
-//console.log(restaurantName, hours, tags);
-
-//const { menu = [], starterMenu: starters = []} = restaurant;
-//console.log(menu, starters);
-
-
-// iterables : arrays, strings, maps, sets. NOT objects
-
-
-// 1.desctructiring
-
-// SPREAD, because on RIGHT side of =
-const arr = [1, 2, ...[3, 4]];
-
-// REST, because on LEFT side of =
-const [a, b, ...stuff] = [1, 2, 3, 4, 5];
-console.log(a, b, stuff);
-
-
-const [pizza, , Risotto, ...otherFood] = [...restaurant.mainMenu,  ...restaurant.starterMenu];
-console.log(pizza, Risotto, otherFood);
-
-// Objects
-
-//const {fri, ...otherDays} = restaurant.openingHours
-//console.log(otherDays);
-
-// 2.functions
-
-const add = function(...numbers) {
-  let sum = 0;
-  for(let  i=0; i < numbers.length; i++) sum += numbers[i];
-  // console.log(sum);
-
-}
-
-add(2, 3)
-add(5, 3, 7, 2)
-add(8, 2, 5, 3, 2, 1, 4, 4)
-
-
-
-const x = [23, 5, 7];
-// add(...x);
-
-// console.log(x);
-
-
-// USE ANY DATA TYPE, return any data type, short-circuiting (use the first truthy value)
-// console.log(3 || 'jONAS'); // returns 3
-
-// console.log('' || 'Jonas'); // returns jonas
-
-// console.log(true || 0); // returns true
-
-// console.log(undefined || null); // returns null
-
-console.log('-------OR---------');
-
-restaurant.numGuests = 0;
-const guests = restaurant.numGuests || 10
-console.log(guests);
-
-
-// nullish values, null and undefined (not 0 or '')
-const guestCorrect = restaurant.numGuests ?? 10;
-console.log(guestCorrect);
-
-console.log('--------AND-------'); // opposite of OR, returns falsy value, or the last truthy value, //
-//everthing needs to be truthy, as soon as theres something false, it will return the false value.
-
-// console.log(0 && 'Mejra');
-// console.log(7 && 'Mejra');
-
-// console.log('Hello' && 23 && null && 'mejra');
-
-// if (restaurant.orderPizza) {
-//   restaurant.orderPizza("mushrooms", 'spinach');
-// }
-
-// restaurant.orderPizza && restaurant.orderPizza 
-// ('mushrooms', 'spinach')
-
-const rest1 = {
-  name: 'Capri',
-  // numGuests: 20,
-  numGuests: 0,
-
-};
-
-const rest2 = {
-  name: 'La Piazza',
-  owner: 'Giovani Govannios',
-};
-
-// OR assignment operator
-// rest2.numGuests = rest2.numGuests || 10;
-// rest1.numGuests = rest1.numGuests || 10;
-
-// rest1.numGuests ||= 10;
-// rest2.numGuests ||= 10;
-
-// nullish asignemnt operator, allows 0
-rest1.numGuests ??= 10;
-rest2.numGuests ??= 10;
-
-// rest2.owner = rest2.owner && '<ANONYMOUS>'; //returns anonymous
-// rest1.owner = rest1.owner && '<ANONYMOUS>'; //returns anonymous
-
-rest1.owner &&= '<ANONYMOUS>'; // returns nothing, undefined
-rest2.owner &&= '<ANONYMOUS>'; // returns anonymous, skips the truthy value
-
-console.log(rest1);
-console.log(rest2);
-
-const ingredients = {
-  savory: ['cheese', 'salami', 'cucumber', 'soy'],
-  sweet: ['chocolate,', 'sugar,', 'peanut butter,', 'strawberries,']
-};
-
-const sIngredients = ingredients.sweet;
-// console.log(...sIngredients);
-
-const chocolateBallrecipe = [...sIngredients ,'milk,', 'vanilla.'];
-console.log(...chocolateBallrecipe);
-
-const allIngredients = ingredients.savory;
-console.log(allIngredients, ...chocolateBallrecipe);
-
-const [spread1, ,spread2] = ingredients.sweet;
-console.log(spread1, spread2);
-
+// Optional chaining
+console.log(restaurant.openingHours.mon?.open); // moves on to open only if mon property does exist, returns undefined

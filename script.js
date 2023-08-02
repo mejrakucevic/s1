@@ -72,17 +72,3 @@ const users = [
 
 console.log(users[0]?.name ?? 'user array empty');
 
-
-function addLength(str) {
-  var sentence = ''
-  for (var i = 0; i < str.length; i++) {
-    sentence += ' ' + str[i];
-  } console.log(addLength(apple));
-
-  
-  return sentence;
-
-//start-here
-}
-
-console.log(addLength(apple));

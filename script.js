@@ -51,5 +51,38 @@ const restaurant = {
 
 // console.log (restaurant.openingHours.mon.open); // returns error
 
-// Optional chaining
+// Optional chaining, checks if property exists before continunig, stops if it doesnt
 console.log(restaurant.openingHours.mon?.open); // moves on to open only if mon property does exist, returns undefined
+
+console.log(restaurant.openingHours?.mon?.open);
+
+const days = ['mon', 'tue', 'wed', 'thu', 'fri', 'sat', 'sun'];
+
+for (const day of days) {
+  console.log(day);
+  const open = restaurant.openingHours[day]?.open  ?? 'closed';
+  console.log(`On ${day}, we open at ${open}`);
+}
+
+console.log(restaurant.order?.(0, 1) ?? 'Method does not exist');
+
+const users = [
+  {name: 'Jonas', email: 'email@gmail.com'}
+];
+
+console.log(users[0]?.name ?? 'user array empty');
+
+
+function addLength(str) {
+  var sentence = ''
+  for (var i = 0; i < str.length; i++) {
+    sentence += ' ' + str[i];
+  } console.log(addLength(apple));
+
+  
+  return sentence;
+
+//start-here
+}
+
+console.log(addLength(apple));

@@ -72,3 +72,24 @@ const users = [
 
 console.log(users[0]?.name ?? 'user array empty');
 
+// property names
+const properties = Object.keys(openingHours);
+console.log(properties);
+
+let openStr = `We are open on ${properties.length} days; `;
+
+for (const day of properties) {
+  openStr += `${day}`; 
+console.log(openStr) }
+
+// property values
+const values = Object.values(openingHours)
+console.log(values); 
+
+// Entire object
+const entires = Object.entries(openingHours);
+
+for (const x of entries) {
+  console.log(x);
+}
+

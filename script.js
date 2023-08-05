@@ -83,13 +83,37 @@ for (const day of properties) {
 console.log(openStr) }
 
 // property values
-const values = Object.values(openingHours)
-console.log(values); 
+// const values = Object.values(openingHours)
+// console.log(values); 
 
-// Entire object
-const entires = Object.entries(openingHours);
+// // Entire object
+// const entires = Object.entries(openingHours);
 
-for (const x of entries) {
-  console.log(x);
-}
+// for (const x of entries) {
+//   console.log(x);
+// }
 
+const ordersSet = new Set(['Pasta', 'Pizza', 'Pizza', 'Risotto', 'Pasta', 'Pizza']);
+console.log(ordersSet);
+
+console.log(ordersSet.has('Pizza'));
+
+ordersSet.add('garlic bread');
+ordersSet.delete('Pizza');
+// ordersSet.clear(); // clears all elements
+
+for (const order of ordersSet)
+console.log(order);
+
+// Example 
+// const staff = ['Waiter', 'Chef', 'Waiter', 'Manager', 'Chef', 'Waiter'];
+// const staffUnique = [...new Set(staff)];
+// console.log(staffUnique);
+
+
+const PlitzerAuthors = ['James Joyce', 'Sally Rooney', 'Sylvia Plath', 'Dostoevsky', 'James Joyce'];
+
+const uniquePA = [...new Set(PlitzerAuthors)];
+console.log(uniquePA);
+
+console.log(new Set('jonasschmedtmann').size); // string count

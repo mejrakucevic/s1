@@ -93,8 +93,8 @@ const days = ['mon', 'tue', 'wed', 'thu', 'fri', 'sat', 'sun'];
 // //   console.log(x);
 // // }
 
-const ordersSet = new Set(['Pasta', 'Pizza', 'Pizza', 'Risotto', 'Pasta', 'Pizza']);
-console.log(ordersSet);
+// const ordersSet = new Set(['Pasta', 'Pizza', 'Pizza', 'Risotto', 'Pasta', 'Pizza']);
+// console.log(ordersSet);
 
 // // console.log(ordersSet.has('Pizza'));
 
@@ -106,9 +106,9 @@ console.log(ordersSet);
 // console.log(order);
 
 // Example 
-const staff = ['Waiter', 'Chef', 'Waiter', 'Manager', 'Chef', 'Waiter'];
-const staffUnique = new Set(staff);
-console.log(staffUnique);
+// const staff = ['Waiter', 'Chef', 'Waiter', 'Manager', 'Chef', 'Waiter'];
+// const staffUnique = new Set(staff);
+// console.log(staffUnique);
 
 
 // const PlitzerAuthors = ['James Joyce', 'Sally Rooney', 'Sylvia Plath', 'Dostoevsky', 'James Joyce'];

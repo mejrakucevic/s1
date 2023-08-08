@@ -181,7 +181,29 @@ for (const [key, value] of question) {
   if(typeof key === 'number') console.log(`Answer ${key}: ${value}`);
 }
 
-const answer = Number(prompt('Your answer'));
-console.log(answer);
+// const answer = Number(prompt('Your answer'));
+// console.log(answer);
 
-console.log(question.get(question.get('correct') === answer));
+// console.log(question.get(question.get('correct') === answer));
+
+const quiz = new Map([
+  ['question', 'Which agent in Valorant is from S.Korea?'],
+  [1, 'Sage'],
+  [2, 'Reyna'],
+  [3, 'Omen'],
+  [4, 'Jett'],
+  ['correct', 4],
+
+  [true, 'Correct'],
+  [false, 'Try again'],
+]);
+
+console.log(quiz);
+
+console.log(quiz.get('question'));
+for (const [key, value] of quiz) {
+  if(typeof key === 'number') console.log(`Answer ${key}: ${value}`);
+}
+
+const answer = Number(prompt('Your answer'));
+console.log(quiz.get(quiz.get('correct') === answer));

@@ -152,13 +152,36 @@ agents.set
 
 agents.get(time < agents.get('age'));
 
-console.log(agents.has('country'));
+// console.log(agents.has('country'));
 agents.delete(2);
 agents.set([1, 2], 'Test');
 
-console.log(agents);
+// console.log(agents);
 
-console.log(agents.size);
+// console.log(agents.size);
 // console.log(agents.clear)
 
 
+const question = new Map([
+  ['question', 'What is the best programming language?'],
+  [1, 'C'],
+  [2, 'Java'],
+  [3, 'Javascript'],
+  ['correct', 3],
+
+  [true, 'Correct'],
+  [false, 'Try again'],
+]);
+
+console.log(question);
+
+
+console.log(question.get('question'));
+for (const [key, value] of question) {
+  if(typeof key === 'number') console.log(`Answer ${key}: ${value}`);
+}
+
+const answer = Number(prompt('Your answer'));
+console.log(answer);
+
+console.log(question.get(question.get('correct') === answer));

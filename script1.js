@@ -103,28 +103,54 @@ const game = {
 
     // printGoals('Davies', 'Muller', 'Lewandowski', 'Kimmich)
     // printGoals('Davis', 'Muller');
-    printGoals(...game.scored);
-    console.log(print);
+    // printGoals(...game.scored);
+    // console.log(print);
 
-    // 7.
-    team1 < team2 && console.log('Team 1 is more likely to win');
+    // // 7.
+    // team1 < team2 && console.log('Team 1 is more likely to win');
 
-    team1 > team2 && console.log('Team 1 is more likely to win');
+    // team1 > team2 && console.log('Team 1 is more likely to win');
 
 
 // 1 
-for(const [i, player] of game.scored.entries())
-console.log(`Game ${i +1}: ${player}`);
+// for(const [i, player] of game.scored.entries())
+// console.log(`Game ${i +1}: ${player}`);
 
 // 2
-for (const odd of Object.values(game.odds))
-  average += odd;
-  average /= odds.length;
-  console.log(average );
+// for (const odd of Object.values(game.odds))
+//   average += odd;
+//   average /= odds.length;
+//   console.log(average );
 
   // 3
+  const gameEvents = new Map([
+    [17, '⚽ GOAL'],
+    [36, '� Substitution'],
+    [47, '⚽ GOAL'],
+    [61, '� Substitution'],
+    [64, '� Yellow card'],
+    [69, '� Red card'],
+    [70, '� Substitution'],
+    [72, '� Substitution'],
+    [76, '⚽ GOAL'],
+    [80, '⚽ GOAL'],
+    [92, '� Yellow card'],
+    ])
 
-  for(const of Object.entries())
+gameEvents.delete(64);
+
+let events = [...new Set(gameEvents.values())];
+
+console.log(events);
+
+console.log(`An event happened, on average, every ${92 / gameEvents.size} minutes`);
+
+for (const [min, event] of gameEvents) {
+    const half = min <=45 ? "First" : "Second"
+    console.log(`[${half} HALF] ${min}: ${event}`);
+
+}
+
 
 
 

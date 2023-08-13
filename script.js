@@ -119,24 +119,24 @@ const days = ['mon', 'tue', 'wed', 'thu', 'fri', 'sat', 'sun'];
 // console.log(new Set('jonasschmedtmann').size); // string count
 
 // MAPS
-let resta = new Map();
+// let resta = new Map();
 
-resta.set('name', 'Classico Italiano');// adding new elements
-resta.set(1, 'Firenze, Italy');
-console.log(resta.set(2, 'Lisbon, Portugal'));
+// resta.set('name', 'Classico Italiano');// adding new elements
+// resta.set(1, 'Firenze, Italy');
+// console.log(resta.set(2, 'Lisbon, Portugal'));
 
-resta
-.set('categories', ['Italian', 'Pizzeria']) 
-.set('open', 11) 
-.set('close', 23)
-.set(true, 'We are open!')
-.set(false, 'We are closed!')
+// resta
+// .set('categories', ['Italian', 'Pizzeria']) 
+// .set('open', 11) 
+// .set('close', 23)
+// .set(true, 'We are open!')
+// .set(false, 'We are closed!')
 
-console.log(resta.get('name'));
+// console.log(resta.get('name'));
 
 const time = 18;
 
-resta.get(time > resta.get('open') && time < resta.get('close')) 
+// resta.get(time > resta.get('open') && time < resta.get('close')) 
 
 let agents = new Map();
 
@@ -173,37 +173,82 @@ const question = new Map([
   [false, 'Try again'],
 ]);
 
-console.log(question);
+// console.log(question);
 
 
-console.log(question.get('question'));
-for (const [key, value] of question) {
-  if(typeof key === 'number') console.log(`Answer ${key}: ${value}`);
-}
+// console.log(question.get('question'));
+// for (const [key, value] of question) {
+//   if(typeof key === 'number') console.log(`Answer ${key}: ${value}`);
+// }
 
 // const answer = Number(prompt('Your answer'));
 // console.log(answer);
 
 // console.log(question.get(question.get('correct') === answer));
 
-const quiz = new Map([
-  ['question', 'Which agent in Valorant is from S.Korea?'],
-  [1, 'Sage'],
-  [2, 'Reyna'],
-  [3, 'Omen'],
-  [4, 'Jett'],
-  ['correct', 4],
+// const quiz = new Map([
+//   ['question', 'Which agent in Valorant is from S.Korea?'],
+//   [1, 'Sage'],
+//   [2, 'Reyna'],
+//   [3, 'Omen'],
+//   [4, 'Jett'],
+//   ['correct', 4],
 
-  [true, 'Correct'],
-  [false, 'Try again'],
-]);
+//   [true, 'Correct'],
+//   [false, 'Try again'],
+// ]);
 
-console.log(quiz);
+// console.log(quiz);
 
-console.log(quiz.get('question'));
-for (const [key, value] of quiz) {
-  if(typeof key === 'number') console.log(`Answer ${key}: ${value}`);
+// console.log(quiz.get('question'));
+// for (const [key, value] of quiz) {
+//   if(typeof key === 'number') console.log(`Answer ${key}: ${value}`);
+// }
+
+// const answer = Number(prompt('Your answer'));
+// console.log(quiz.get(quiz.get('correct') === answer));
+
+const airline = 'TAP Air Portugal';
+const plane = 'A320';
+
+console.log(plane[0]);
+
+console.log(airline.length);
+console.log('NikolaTesla'.length);
+
+console.log(airline.indexOf('r'));
+
+console.log(airline.slice(4)); // cuts everything from before index 4
+console.log(airline.slice(4, 7));
+
+console.log(airline.slice(0, airline.indexOf(' '))); // extracting the first word, that we dont know
+console.log(airline.slice(airline.lastIndexOf(' ') + 1));
+
+console.log(airline.slice(-2));
+console.log(airline.slice(1, -1));  
+
+const checkMiddleFunction = function(seat) {
+  // B and E are middle seats
+  const seatNumber = seat.slice(-1);
+  if (seatNumber === 'B' || seatNumber === 'C') {
+    console.log('You are in the middle seat');
+  } else {
+    console.log('You are NOT in the middle seat');
+  }
+};
+
+checkMiddleFunction('11B');
+checkMiddleFunction('23C');
+checkMiddleFunction('3E');
+
+// check if name ends in A function
+const nameChecker = function(name) {
+  let lastLetter = name.slice(-1);
+
+  if (lastLetter === 'a') {
+    console.log('Your name ends in A');
+  }
+
 }
 
-const answer = Number(prompt('Your answer'));
-console.log(quiz.get(quiz.get('correct') === answer));
+nameChecker('mejra');

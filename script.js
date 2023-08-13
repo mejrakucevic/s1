@@ -252,3 +252,26 @@ const nameChecker = function(name) {
 }
 
 nameChecker('mejra');
+
+console.log(airline.toLowerCase());
+console.log(airline.toUpperCase());
+console.log('mejra'.toUpperCase());
+
+// Fix capitalization in name
+
+const passenger = 'jonAS'; // Jonas
+
+const passengerLower = passenger.toLowerCase();
+const passengerCorrect = passengerLower[0].toUpperCase() + passengerLower.slice(1);
+console.log(passengerCorrect);
+
+// Check & fix user email
+const email = 'jonas@gmail.com';
+const loginEmail = ' jonas@Gmail.Com ';
+
+// const lowerEmail = loginEmail.toLowerCase();
+// const trimmedEmail = lowerEmail.trim(); // removes empty space
+// console.log(trimmedEmail);
+
+const normalizedEmail = loginEmail.toLowerCase().trim();
+console.log(normalizedEmail);

@@ -275,3 +275,38 @@ const loginEmail = ' jonas@Gmail.Com ';
 
 const normalizedEmail = loginEmail.toLowerCase().trim();
 console.log(normalizedEmail);
+
+// replacing
+const priceGB = '288,96£';
+const priceUS = priceGB.replace('£', '$').replace(',', '.');
+
+console.log(priceUS);
+
+const announcment = 'All passengers come to boarding door 23. Boarding door 23!'
+
+console.log(announcment.replaceAll('door', 'gate'));
+
+const planeModel = 'Airbus A320 neon';
+console.log(planeModel.includes('Airbus A320 neon'));
+
+console.log(plane.startsWith('Air'));
+
+if (planeModel.startsWith('Airbus') && planeModel.endsWith('neon')) {
+  console.log('Part of the brand NEW Airbus family');
+}
+
+// Practice example
+
+const checkBaggage = function(items) {
+     const baggage = items.toLowerCase();
+
+     if(baggage.includes('knife') || baggage.includes('gun')) {
+      console.log('You cant enter the plane');
+     } else {
+      console.log('Welcome aboard');
+     }
+}
+
+checkBaggage('I have a laptop, Food and pocket Knife');
+checkBaggage('Socks and camera');
+checkBaggage('Some snacks and gun for protection');

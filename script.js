@@ -310,3 +310,13 @@ const checkBaggage = function(items) {
 checkBaggage('I have a laptop, Food and pocket Knife');
 checkBaggage('Socks and camera');
 checkBaggage('Some snacks and gun for protection');
+
+console.log('a+very+nice+string'.split('+'));
+
+console.log('Mejra Kucevic'.split(' '));
+
+const [firstName, lastName] = 'Mejra Kucevic'.split(' ');
+
+const newName = ['Mrs.', firstName, lastName.toUpperCase()].join(' ');
+
+console.log(newName);

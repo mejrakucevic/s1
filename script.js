@@ -320,3 +320,14 @@ const [firstName, lastName] = 'Mejra Kucevic'.split(' ');
 const newName = ['Mrs.', firstName, lastName.toUpperCase()].join(' ');
 
 console.log(newName);
+
+const capitalizedName = function(name) {
+       const names = name.split(' ');
+       const namesUpper = [];
+
+       for(const n of names) {
+        namesUpper.push(n[0].toUpperCase() + n.slice(1))
+       } console.log(namesUpper.join(' '));
+}
+
+capitalizedName('jessica ann smith davis');

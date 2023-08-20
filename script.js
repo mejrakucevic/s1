@@ -331,3 +331,29 @@ const capitalizedName = function(name) {
 }
 
 capitalizedName('jessica ann smith davis');
+
+// Padding
+const message = 'Go to gate 3';
+console.log(message.padStart(25, '-').padEnd(35, '-'));
+console.log('Mejra'.padStart(25, ' ').padEnd(30, ' '));
+
+// card number hider
+const maskCreditCard = function(number) {
+  const str = number + '';
+  const last = str.slice(-4);
+  return last.padStart(str.length, '*');
+}
+
+console.log(maskCreditCard(451263978636345));
+
+// Repeat
+const message2 = 'Bad weather....All departures Delayed... ';
+
+console.log(message2.repeat(5));
+
+const planesInLine = function(n) {
+  console.log( `There are ${n} planes in line ${'✈️'.repeat(n)} `);
+}
+
+planesInLine(5);
+planesInLine(12)

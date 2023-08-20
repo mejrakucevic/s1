@@ -32,74 +32,74 @@
 // operator
 
 
-const game = {
-    team1: 'Bayern Munich',
-    team2: 'Borrussia Dortmund',
-    players: [
-    [
-    'Neuer',
-    'Pavard',
-    'Martinez',
-    'Alaba',
-    'Davies',
-    'Kimmich',
-    'Goretzka',
-    'Coman',
-    'Muller',
-    'Gnarby',
-    'Lewandowski',
-    ],
-    [
-    'Burki',
-    'Schulz',
-    'Hummels',
-    'Akanji',
-    'Hakimi',
-    'Weigl',
-    'Witsel',
-    'Hazard',
-    'Brandt',
-    'Sancho',
-    'Gotze',
-    ],
-    ],
-    score: '4:0',
-    scored: ['Lewandowski', 'Gnarby', 'Lewandowski',
-    'Hummels'],
-    date: 'Nov 9th, 2037',
-    odds: {
-    team1: 1.33,
-    x: 3.25,
-    team2: 6.5,
-    },
-    };
+// const game = {
+//     team1: 'Bayern Munich',
+//     team2: 'Borrussia Dortmund',
+//     players: [
+//     [
+//     'Neuer',
+//     'Pavard',
+//     'Martinez',
+//     'Alaba',
+//     'Davies',
+//     'Kimmich',
+//     'Goretzka',
+//     'Coman',
+//     'Muller',
+//     'Gnarby',
+//     'Lewandowski',
+//     ],
+//     [
+//     'Burki',
+//     'Schulz',
+//     'Hummels',
+//     'Akanji',
+//     'Hakimi',
+//     'Weigl',
+//     'Witsel',
+//     'Hazard',
+//     'Brandt',
+//     'Sancho',
+//     'Gotze',
+//     ],
+//     ],
+//     score: '4:0',
+//     scored: ['Lewandowski', 'Gnarby', 'Lewandowski',
+//     'Hummels'],
+//     date: 'Nov 9th, 2037',
+//     odds: {
+//     team1: 1.33,
+//     x: 3.25,
+//     team2: 6.5,
+//     },
+//     };
 
     // 1.
-    const [players1, players2] = game.players;
+    // const [players1, players2] = game.players;
 
-    // 2.
-    const [gk, ...fieldPlayers] = players1;
-    console.log(gk, fieldPlayers);
+    // // 2.
+    // const [gk, ...fieldPlayers] = players1;
+    // console.log(gk, fieldPlayers);
 
-    // 3.
+    // // 3.
 
-    const allPlayers = [...players1, ...players2];
+    // const allPlayers = [...players1, ...players2];
 
-    // 4.
-    const players1final = [...players1, 'Thiago', 'Coutinho','Perisic'];
-    console.log(players1final);
+    // // 4.
+    // const players1final = [...players1, 'Thiago', 'Coutinho','Perisic'];
+    // console.log(players1final);
 
-    // 5.
-    const {odds: {team1, x: draw, team2}} = game;
+    // // 5.
+    // const {odds: {team1, x: draw, team2}} = game;
 
-    // easier way to desctructure odds
-    // const odds = game.odds;
-    // console.log(odds);
+    // // easier way to desctructure odds
+    // // const odds = game.odds;
+    // // console.log(odds);
 
-    // 6.
-    const printGoals = function(...players) {
-        console.log(`${players.length} goals were scored`);
-    };
+    // // 6.
+    // const printGoals = function(...players) {
+    //     console.log(`${players.length} goals were scored`);
+    // };
 
     // printGoals('Davies', 'Muller', 'Lewandowski', 'Kimmich)
     // printGoals('Davis', 'Muller');
@@ -123,33 +123,51 @@ const game = {
 //   console.log(average );
 
   // 3
-  const gameEvents = new Map([
-    [17, '⚽ GOAL'],
-    [36, '� Substitution'],
-    [47, '⚽ GOAL'],
-    [61, '� Substitution'],
-    [64, '� Yellow card'],
-    [69, '� Red card'],
-    [70, '� Substitution'],
-    [72, '� Substitution'],
-    [76, '⚽ GOAL'],
-    [80, '⚽ GOAL'],
-    [92, '� Yellow card'],
-    ])
+//   const gameEvents = new Map([
+//     [17, '⚽ GOAL'],
+//     [36, '� Substitution'],
+//     [47, '⚽ GOAL'],
+//     [61, '� Substitution'],
+//     [64, '� Yellow card'],
+//     [69, '� Red card'],
+//     [70, '� Substitution'],
+//     [72, '� Substitution'],
+//     [76, '⚽ GOAL'],
+//     [80, '⚽ GOAL'],
+//     [92, '� Yellow card'],
+//     ])
 
-gameEvents.delete(64);
+// gameEvents.delete(64);
 
-let events = [...new Set(gameEvents.values())];
+// let events = [...new Set(gameEvents.values())];
 
-console.log(events);
+// console.log(events);
 
-console.log(`An event happened, on average, every ${92 / gameEvents.size} minutes`);
+// console.log(`An event happened, on average, every ${92 / gameEvents.size} minutes`);
 
-for (const [min, event] of gameEvents) {
-    const half = min <=45 ? "First" : "Second"
-    console.log(`[${half} HALF] ${min}: ${event}`);
+// for (const [min, event] of gameEvents) {
+//     const half = min <=45 ? "First" : "Second"
+//     console.log(`[${half} HALF] ${min}: ${event}`);
+
+// }
+
+
+document.body.append(document.createElement('textarea'));
+document.body.append(document.createElement('button'));
+
+const btn = addEventListener('button', click) {
+    let textarea1 = btn.text;
 
 }
+
+
+const inputText = textarea.toLowerCase().remove('_'.);
+
+const [firstWord, secondWord] = textarea.split('_'); 
+
+//const newWord = firstWord + secondWord.toUpperCase.join(' ');
+
+const newWord = textarea.split('_')
 
 
 
